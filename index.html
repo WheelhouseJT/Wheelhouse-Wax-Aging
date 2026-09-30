@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wheelhouse sealed-wax inventory and market dashboard" />
+  <title>Wheelhouse Market Desk</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">WH</span><span><b>WHEELHOUSE</b><small>MARKET DESK</small></span></div>
+    <nav><button class="nav active">▦ <span>Overview</span></button><button class="nav">▣ <span>Inventory</span></button><button class="nav">⌁ <span>Market trends</span></button><button class="nav">✦ <span>Insights</span></button></nav>
+    <div class="demo"><b><i></i> Demo data</b><p>Square and market connections will be added securely after setup.</p></div>
+  </aside>
+  <main>
+    <header><div class="search"><span>⌕</span><input id="search" placeholder="Search sealed inventory" /></div><button id="sync" class="sync">↻ Sync market</button></header>
+    <section class="content">
+      <div class="title-row"><div><p class="eyebrow">INVENTORY INTELLIGENCE</p><h1>Where Wheelhouse stands.</h1><p class="sub">Live inventory versus the sealed-wax market.</p></div><small>Prototype data</small></div>
+      <div class="metrics">
+        <article><span>Units in stock</span><strong id="units">200</strong><small>Across 8 tracked products</small></article>
+        <article><span>Market value</span><strong id="marketValue">$44,034</strong><small>Current estimated retail</small></article>
+        <article><span>Projected margin</span><strong id="margin">$14,715</strong><small class="good">At current market prices</small></article>
+        <article><span>Pricing opportunities</span><strong id="opportunities">4</strong><small class="good">Products below market</small></article>
+      </div>
+      <section class="panel">
+        <div class="panel-head"><div><h2>Sealed inventory</h2><p>Sorted by pricing opportunity</p></div><select id="filter"><option>All inventory</option><option>Below market</option><option>Above market</option><option>On market</option></select></div>
+        <div class="table-wrap"><table><thead><tr><th>Product</th><th>Stock</th><th>Cost</th><th>WH price</th><th>Market</th><th>30 day</th><th>Position</th></tr></thead><tbody id="inventory"></tbody></table><div id="empty" class="empty" hidden>No products match this search.</div></div>
+      </section>
+      <p class="notice">Prototype figures are for layout testing. Live Square and retailer connections are not active yet.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
